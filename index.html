@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <audio id="task-added-sound" src="sounds/task-added.mp3"></audio>
     <audio id="task-removed-sound" src="sounds/task-removed.mp3"></audio>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <div class="container">
@@ -17,7 +19,12 @@
                 <h2 class="profile-name">Lata</h2>
             </div>
             <div class="scheduled-tasks">
-                <h3><i class="fa-solid fa-list-check"></i> Scheduled Tasks</h3>
+                <h3><i class="fa-solid fa-list-check"></i> DAILY REMINDERS</h3>
+                <ul>
+                    <li>Task 1</li>
+                    <li>Task 2</li>
+                </ul>
+                <h3><i class="fa-solid fa-list-check"></i> EMERGENCY CONTACT</h3>
                 <ul>
                     <li>Task 1</li>
                     <li>Task 2</li>
@@ -33,25 +40,25 @@
                 <div class="right-side-form">
                     <div class="form-input">
                         <label for="task-input">
-                            <span style="color: aliceblue">NEW TASK</span>
+                            <span style="color: aliceblue">NEW REMINDERS</span>
                         </label>
                         <input
                             type="text"
                             id="task-input"
                             aria-required="true"
-                            placeholder="Enter task here"
+                            placeholder="ENTER TASK HERE"
                         />
                     </div>
                     <div class="form-btn">
                         <button type="submit">
-                            <span style="color: aliceblue">ADD TASK</span>
+                            <span style="color: aliceblue">ADD</span>
                         </button>
                         <button
                             type="button"
                             id="voice-button"
                             aria-label="Add task using voice"
                         >
-                            🎙️
+                        <i class="fa-solid fa-microphone"></i>
                         </button>
                     </div>
                 </div>
