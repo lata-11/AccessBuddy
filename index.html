@@ -1,37 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Access Buddyt</title>
+    <title>Access Buddy</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <audio id="task-added-sound" src="sounds/task-added.mp3"></audio>
     <audio id="task-removed-sound" src="sounds/task-removed.mp3"></audio>
-  </head>
-  <body>
+</head>
+<body>
     <div class="container">
-      <h1><span style="color: aliceblue;">ACCESS</span> <span style="color: rgb(49, 135, 211);">BUDDY</span> </h1>
-      <form id="task-form">
-        <label for="task-input"><span style="color: aliceblue;">NEW TASK</span></label>
-        <input
-          type="text"
-          id="task-input"
-          aria-required="true"
-          placeholder="Enter task here"
-        />
-        <button type="submit"><span style="color: aliceblue;">ADD TASK</span></button>
-        <button
-          type="button"
-          id="voice-button"
-          aria-label="Add task using voice"
-        >
-          🎙️
-        </button>
-      </form>
-      <ul id="task-list" role="list">
-        <!-- Tasks will be dynamically added here -->
-      </ul>
+        <div class="left-panel">
+            <div class="profile">
+                <img src="assets/profile-pic.jpeg" alt="Profile Picture" class="profile-pic" />
+                <h2 class="profile-name">Lata</h2>
+            </div>
+            <div class="scheduled-tasks">
+                <h3><i class="fa-solid fa-list-check"></i> Scheduled Tasks</h3>
+                <ul>
+                    <li>Task 1</li>
+                    <li>Task 2</li>
+                </ul>
+            </div>
+        </div>
+        <div class="right-panel">
+            <h1>
+                <span style="color: aliceblue">ACCESS</span>
+                <span style="color: rgb(49, 135, 211)">BUDDY</span>
+            </h1>
+            <form id="task-form">
+                <div class="right-side-form">
+                    <div class="form-input">
+                        <label for="task-input">
+                            <span style="color: aliceblue">NEW TASK</span>
+                        </label>
+                        <input
+                            type="text"
+                            id="task-input"
+                            aria-required="true"
+                            placeholder="Enter task here"
+                        />
+                    </div>
+                    <div class="form-btn">
+                        <button type="submit">
+                            <span style="color: aliceblue">ADD TASK</span>
+                        </button>
+                        <button
+                            type="button"
+                            id="voice-button"
+                            aria-label="Add task using voice"
+                        >
+                            🎙️
+                        </button>
+                    </div>
+                </div>
+                <ul id="task-list" role="list">
+                    <!-- Tasks will be dynamically added here -->
+                </ul>
+            </form>
+        </div>
     </div>
     <script src="script.js"></script>
-  </body>
+</body>
 </html>
