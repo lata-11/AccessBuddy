@@ -106,3 +106,15 @@ document.addEventListener('DOMContentLoaded', () => {
         recognition.start();
     });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const dropdownHeaders = document.querySelectorAll('.dropdown-header');
+
+    dropdownHeaders.forEach(header => {
+        header.addEventListener('click', () => {
+            const dropdown = header.parentElement;
+            dropdown.classList.toggle('active');
+        });
+    });
+});
+

@@ -2,7 +2,6 @@
 html, body {
     height: 100%;
     margin: 0;
-    
 }
 
 body {
@@ -36,7 +35,6 @@ body {
     border-right: 2px solid #444;
     display: flex;
     flex-direction: column;
-    /* justify-content: space-between; */
 }
 
 .right-panel {
@@ -63,19 +61,13 @@ body {
 
 .scheduled-tasks {
     margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
-.scheduled-tasks h3 {
-    margin-bottom: 10px;
-}
-
-.scheduled-tasks ul {
-    list-style: none;
-    padding: 0;
-}
-
-.scheduled-tasks ul li {
-    margin-bottom: 10px;
+.scheduled-tasks .dropdown {
+    flex: 1;
 }
 
 h1 {
@@ -86,7 +78,7 @@ h1 {
 #task-form {
     display: flex;
     flex-direction: column;
-    gap: 20px; /* Adjust gap between elements */
+    gap: 20px;
 }
 
 .right-side-form {
@@ -117,7 +109,7 @@ input {
     flex: 1;
 }
 
-button {
+.add-btn {
     padding: 10px;
     background-color: rgb(49, 135, 211);
     color: #fff;
@@ -126,9 +118,9 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+/* button:hover {
     background-color: #0056b3;
-}
+} */
 
 #voice-button {
     background-color: #28a745;
@@ -164,4 +156,74 @@ li button {
 
 li button:hover {
     background-color: #c82333;
+}
+
+/* Dropdown styles */
+
+.dropdown-header {
+    background-color: #2d2d2d;
+    color: #fff;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+}
+
+/* Flex container for logo and text */
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Adjust the space between the logo and text */
+}
+
+.header-logo {
+    margin-right: 10px; /* Space between logo and text */
+}
+
+.header-text {
+    flex: 1;
+}
+
+/* Caret icon styling */
+.fa-caret-down {
+    margin-left: 10px; /* Space between text and caret */
+    transition: transform 0.3s;
+}
+
+/* Dropdown content styling */
+.dropdown-content {
+    display: none;
+    background-color: #444;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: 5px;
+    margin-left: 20px;
+}
+
+.dropdown-content ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-content ul li {
+    padding: 5px 0;
+    color: #fff;
+}
+
+.dropdown-content ul li:hover {
+    background-color: #555;
+}
+
+/* Show the dropdown content when active */
+.dropdown.active .dropdown-content {
+    display: block;
+}
+
+.dropdown.active .fa-caret-down {
+    transform: rotate(180deg);
 }
