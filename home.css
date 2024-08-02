@@ -1,0 +1,55 @@
+/* General styles */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    background-image: url("assets/bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #333;
+    font-family: 'Nunito', sans-serif;
+}
+
+/* Container styling */
+.container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    width: 90%;
+    max-width: 1200px;
+    height: 90vh;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #2d2d2d;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    background-image: url(assets/helping_hand.jpg);
+    background-size: cover; /* Ensure the background covers the container */
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.content {
+    text-align: center;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.6); /* Slightly transparent background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+h3 {
+    margin: 0;
+    font-size: 2em;
+}
+
+.quote {
+    margin-top: 20px;
+    font-size: 1.2em;
+    font-style: italic;
+}
