@@ -1,10 +1,17 @@
 /* styles.css */
+html, body {
+    height: 100%; 
+    margin: 0; 
+}
+
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #f4f4f4; 
+    background-image: url("assets/bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat; 
+    background-position: center; 
     color: #333;
-    margin: 0;
-    padding: 0;
 }
 
 .container {
@@ -12,7 +19,8 @@ body {
     max-width: 600px;
     margin: auto;
     padding: 20px;
-    background-color: #fff;
+    margin-top: 10%;
+    background-color: #2d2d2d;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
