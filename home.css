@@ -53,3 +53,35 @@ h3 {
     font-size: 1.2em;
     font-style: italic;
 }
+.get-started {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.get-started input {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    flex: 1;
+}
+
+.get-started button {
+    background-color:rgb(160, 49, 211);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.get-started button:hover {
+    background-color: rgb(160, 49, 211);
+}

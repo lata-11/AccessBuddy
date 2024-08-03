@@ -118,3 +118,16 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+// JavaScript for Text-to-Speech
+document.getElementById('play-quote').addEventListener('click', () => {
+    const quoteText = document.getElementById('quote-text').textContent;
+    const speech = new SpeechSynthesisUtterance(quoteText);
+    speechSynthesis.speak(speech);
+});
+
+// JavaScript for Info Button
+document.getElementById('info-button').addEventListener('click', () => {
+    alert('Access Buddy is a platform designed to enhance accessibility and provide support for individuals with disabilities. Our goal is to create tools and resources that make everyday tasks easier and more inclusive.');
+});
+
+
