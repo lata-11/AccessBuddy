@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Access Buddy</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left-panel">
+            <!-- Back Arrow Link -->
+            <a href="home.html" class="back-arrow" aria-label="Back to Home">
+                <i class="fa-solid fa-arrow-left"></i>
+            </a>
+            
+            <div class="profile">
+                <img src="assets/profile-pic.jpeg" alt="Profile Picture" class="profile-pic">
+                <h2 class="profile-name">LATA</h2>
+            </div>
+            <div class="scheduled-tasks">
+                <div class="dropdown">
+                    <div class="dropdown-header">
+                        <div class="header-content">
+                            <i class="fa-solid fa-bell header-logo"></i>
+                            <span class="header-text">YOUR TASK</span>
+                        </div>
+                        <i class="fa-solid fa-caret-down"></i>
+                    </div>
+                    <div class="dropdown-content">
+                        <ul>
+                            <li id="add-remove-task-option">
+                                <a href="add.html">ADD/REMOVE TASK <i class="fa-solid fa-plus"></i></a>
+                            </li>
+                            <li id="set-reminder-option">
+                                <a href="reminder.html">SET REMINDER <i class="fa-solid fa-plus"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+               
+                <div class="dropdown">
+                    <div class="dropdown-header">
+                        <div class="header-content">
+                            <i class="fa-solid fa-book header-logo"></i> 
+                            <span class="header-text">READ DOCUMENT</span>
+                        </div>
+                        <i class="fa-solid fa-caret-down"></i>
+                    </div>
+                    <div class="dropdown-content">
+                        <ul>
+                            <li>Task 1</li>
+                            <li>Task 2</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <div class="dropdown-header">
+                        <div class="header-content">
+                            <i class="fa-solid fa-phone header-logo"></i> 
+                            <span class="header-text">EMERGENCY CONTACT</span>
+                        </div>
+                        <i class="fa-solid fa-caret-down"></i>
+                    </div>
+                    <div class="dropdown-content">
+                        <ul>
+                            <li>Task 1</li>
+                            <li>Task 2</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <div class="dropdown-header">
+                        <div class="header-content">
+                            <i class="fa-solid fa-cog header-logo"></i> 
+                            <span class="header-text">ACCOUNT SETTINGS</span>
+                        </div>
+                        <i class="fa-solid fa-caret-down"></i>
+                    </div>
+                    <div class="dropdown-content">
+                        <ul>
+                            <li>APP GUIDE</li>
+                            <li>CHANGE PROFILE PICTURE</li>
+                            <li>LOGOUT</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="right-panel" id="task-interface">
+            <h1>
+                <span style="color: aliceblue">ACCESS</span>
+                <span style="color: rgb(49, 135, 211)">BUDDY</span>
+            </h1>
+            <form id="reminder-form">
+                <div class="right-side-form">
+                    <div class="form-input">
+                        <label for="reminder-message"><span style="color: aliceblue">Reminder Message</span></label>
+                        <input type="text" id="reminder-message" aria-required="true" placeholder="Enter reminder message here">
+                    </div>
+                    <div class="form-input">
+                        <label for="reminder-date"><span style="color: aliceblue">Date</span></label>
+                        <input type="date" id="reminder-date" aria-required="true">
+                    </div>
+                    <div class="form-input">
+                        <label for="reminder-time"><span style="color: aliceblue">Time</span></label>
+                        <input type="time" id="reminder-time" aria-required="true">
+                    </div>
+                    <div class="form-input">
+                        <label for="phone-number"><span style="color: aliceblue">Phone Number</span></label>
+                        <input type="tel" id="phone-number" aria-required="true" placeholder="Enter phone number">
+                    </div>
+                    <div class="form-btn">
+                        <button type="submit" class="add-btn"><span style="color: aliceblue">SET REMINDER</span></button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        document.getElementById('reminder-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const message = document.getElementById('reminder-message').value;
+            const phoneNumber = document.getElementById('phone-number').value;
+
+            fetch('/send-reminder', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    message: message,
+                    phoneNumber: phoneNumber,
+                }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert('Reminder set successfully!');
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Failed to set reminder.');
+            });
+        });
+    </script>
+</body>
+</html>

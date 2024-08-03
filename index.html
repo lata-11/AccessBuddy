@@ -32,10 +32,17 @@
                     </div>
                     <div class="dropdown-content">
                         <ul>
-                            <li>Task 1</li>
-                            <li>Task 2</li>
+                            <li id="add-remove-task-option">
+                                <a href="add.html">ADD/REMOVE TASK <i class="fa-solid fa-plus"></i></a>
+                            </li>
+                            <li>
+                                <li id="add-remove-task-option">
+                                    <a href="reminder.html">SET REMINDER <i class="fa-solid fa-plus"></i></a>
+                                </li>
+                            </li>
                         </ul>
                     </div>
+                    
                 </div>
                
                 <div class="dropdown">
@@ -87,12 +94,12 @@
             </div>
         </div>
         
-        <div class="right-panel">
+        <div class="right-panel" id="task-interface">
             <h1>
                 <span style="color: aliceblue">ACCESS</span>
                 <span style="color: rgb(49, 135, 211)">BUDDY</span>
             </h1>
-            <form id="task-form">
+            <!-- <form id="task-form">
                 <div class="right-side-form">
                     <div class="form-input">
                         <label for="task-input"><span style="color: aliceblue">NEW TASK</span></label>
@@ -105,8 +112,8 @@
                 </div>
             </form>
             <ul id="task-list" role="list">
-                <!-- Tasks will be dynamically added here -->
-            </ul>
+                 Tasks will be dynamically added here 
+            </ul> -->
         </div>
     </div>
     <script src="script.js"></script>

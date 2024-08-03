@@ -85,3 +85,6 @@ h3 {
 .get-started button:hover {
     background-color: rgb(160, 49, 211);
 }
+#info-button, #play-quote{
+    padding: 8px;
+}

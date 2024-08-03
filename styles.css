@@ -198,8 +198,8 @@ li button:hover {
 /* Dropdown content styling */
 .dropdown-content {
     display: none;
-    background-color: #444;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    /* background-color: #444;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); */
     padding: 10px;
     border-radius: 4px;
     margin-top: 5px;
@@ -229,6 +229,32 @@ li button:hover {
 .dropdown.active .fa-caret-down {
     transform: rotate(180deg);
 }
+.dropdown-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-content ul li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dropdown-content ul li a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.dropdown-content ul li a i {
+    margin-left: auto;
+}
+
 
 /* Back Arrow Styling */
 
