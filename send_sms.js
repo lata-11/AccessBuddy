@@ -37,8 +37,8 @@ async function makeCall(to, url) {
 }
 
 // Example usage
-const phoneNumber = '+91 7459 836 459'; // Replace with recipient phone number
-const message = 'Hello from Access Buddy! This message is to remind you that'; // Replace with your message
+const phoneNumber = '+91 8340776128'; // Replace with recipient phone number
+const message = 'Hello from Access Buddy! This message is to remind you that you have set a reminder with message "Visit Doctor Ram at 9:00 PM'; // Replace with your message
 const callUrl = 'http://demo.twilio.com/docs/voice.xml'; // URL with TwiML instructions for the call
 
 // Send SMS
