@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Access Buddy</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <audio id="task-added-sound" src="sounds/task-added.mp3"></audio>
+    <audio id="task-removed-sound" src="sounds/task-removed.mp3"></audio>
+</head>
+<body>
+    <div class="container">
+        <div class="left-panel">
+            <!-- Back Arrow Link -->
+            <a href="home.html" class="back-arrow" aria-label="Back to Home">
+                <i class="fa-solid fa-arrow-left"></i>
+            </a>
+            
+            <div class="profile">
+                <img src="assets/profile-pic.jpeg" alt="Profile Picture" class="profile-pic">
+                <h2 class="profile-name">LATA</h2>
+            </div>
+            <div class="scheduled-tasks">
+                <div class="dropdown">
+                    <div class="dropdown-header">
+                        <div class="header-content">
+                            <i class="fa-solid fa-bell header-logo"></i>
+                            <span class="header-text">YOUR TASK</span>
+                        </div>
+                        <i class="fa-solid fa-caret-down"></i>
+                    </div>
+                    <div class="dropdown-content">
+                        <ul>
+                            <li id="add-remove-task-option">
+                                <a href="add.html">ADD/REMOVE TASK <i class="fa-solid fa-plus"></i></a>
+                            </li>
+                          
+                            <li id="add-remove-task-option">
+                                <a href="reminder.html">SET REMINDER <i class="fa-solid fa-plus"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+               
+                <div class="dropdown">
+                    <div class="dropdown-header">
+                        <div class="header-content">
+                            <i class="fa-solid fa-book header-logo"></i> 
+                            <span class="header-text">DOCUMENTS</span>
+                        </div>
+                        <i class="fa-solid fa-caret-down"></i>
+                    </div>
+                    <div class="dropdown-content">
+                        <ul>
+                            <li id="read-document-task-option">
+                                <a href="read_doc.html">READ A DOCUMENT <i class="fa-solid fa-plus"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <div class="dropdown-header">
+                        <div class="header-content">
+                            <i class="fa-solid fa-phone header-logo"></i> 
+                            <span class="header-text">EMERGENCY CONTACT</span>
+                        </div>
+                        <i class="fa-solid fa-caret-down"></i>
+                    </div>
+                    <div class="dropdown-content">
+                        <ul>
+                            <li>Task 1</li>
+                            <li>Task 2</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <div class="dropdown-header">
+                        <div class="header-content">
+                            <i class="fa-solid fa-cog header-logo"></i> 
+                            <span class="header-text">ACCOUNT SETTINGS</span>
+                        </div>
+                        <i class="fa-solid fa-caret-down"></i>
+                    </div>
+                    <div class="dropdown-content">
+                        <ul>
+                            <li><a href="app_guide.html">APP GUIDE</a></li>
+                            <li>CHANGE PROFILE PICTURE</li>
+                            <li>LOGOUT</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="right-panel" id="task-interface">
+            <h1>
+                <span style="color: aliceblue">ACCESS</span>
+                <span style="color: rgb(49, 135, 211)">BUDDY</span>
+            </h1>
+
+            <div class="scrollable-content">
+                <!-- App Guide Content -->
+                <section class="section">
+                    <h2>Introduction</h2>
+                    <p>Welcome to Access Buddy, a platform designed to enhance accessibility and provide support for individuals with disabilities. Our goal is to create tools and resources that make everyday tasks easier and more inclusive. This guide will walk you through the main features of the application and how to use them.</p>
+                </section>
+
+                <section class="section" id="section-id">
+                    <h2>Navigating the Interface</h2>
+                    <h3>1. Home Screen</h3>
+                    <ul>
+                        <li><strong>Profile Section:</strong> Displays your profile picture and name.</li>
+                        <li><strong>Task Management:</strong> Add, remove, and manage your tasks.</li>
+                        <li><strong>Study Help:</strong> Access features for reading documents.</li>
+                        <li><strong>Emergency Contact:</strong> Manage and view emergency contacts.</li>
+                        <li><strong>Account Settings:</strong> Access settings, change your profile picture, and log out.</li>
+                    </ul>
+
+                    <h3>2. Task Management</h3>
+                    <h4>Add/Remove Task:</h4>
+                    <ul>
+                        <li><strong>Add Task:</strong> Type your task into the input field and press "Add Task" to save it.</li>
+                        <li><strong>Remove Task:</strong> Click the "Remove" button next to any task to delete it.</li>
+                        <li><strong>Voice Commands:</strong> Click the "Voice Command" button to use voice commands for adding or removing tasks. Simply speak your command, and the app will handle it.</li>
+                    </ul>
+                    <h4>Read All Tasks:</h4>
+                    <ul>
+                        <li><strong>Button:</strong> Click the "Read All Tasks" button to have the app read out all your current tasks.</li>
+                    </ul>
+
+                    <h3>3. Reminder Management</h3>
+                    <h4>Add Reminder:</h4>
+                    <ul>
+                        <li><strong>Form:</strong> Fill in the reminder message, date, time, and phone number in the form.</li>
+                        <li><strong>Save Reminder:</strong> Press "Save Reminder" to add it to your list. The reminder will be saved and displayed.</li>
+                        <li><strong>Voice Commands:</strong> Use the voice command button to add reminders by speaking.</li>
+                    </ul>
+
+                    <h3>4. Study Help</h3>
+                    <h4>Read Document:</h4>
+                    <ul>
+                        <li><strong>Document Upload:</strong> Upload a document for the app to read.</li>
+                        <li><strong>Voice Reading:</strong> The app will read out the document content using text-to-speech.</li>
+                    </ul>
+
+                    <h3>5. Accessibility Features</h3>
+                    <h4>Text-to-Speech:</h4>
+                    <ul>
+                        <li><strong>Text Area:</strong> Type text into the provided text area.</li>
+                        <li><strong>Read Button:</strong> Press "Read" to have the app read the text aloud using speech synthesis.</li>
+                    </ul>
+
+                    <h3>6. Dropdown Menus</h3>
+                    <ul>
+                        <li><strong>Task Management Dropdown:</strong> Contains options to add/remove tasks and set reminders.</li>
+                        <li><strong>Study Help Dropdown:</strong> Contains options for document reading.</li>
+                        <li><strong>Emergency Contact Dropdown:</strong> View and manage emergency contacts.</li>
+                        <li><strong>Account Settings Dropdown:</strong> Access app guide, change profile picture, and log out.</li>
+                    </ul>
+
+                    <h2>Voice Commands</h2>
+                    <h3>General Commands:</h3>
+                    <ul>
+                        <li><strong>Add Task:</strong> Speak “Add [task description]” to add a task.</li>
+                        <li><strong>Remove Task:</strong> Speak “Remove [task description]” to delete a task.</li>
+                        <li><strong>Exit:</strong> Speak “Exit” or “Bye” to stop voice commands.</li>
+                    </ul>
+                </section>
+                
+            </div>
+            <div class="app-guide-form-btn">
+                <button type="button" id="read-text-btn" aria-label="Read the text">READ TEXT</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

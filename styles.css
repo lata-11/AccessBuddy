@@ -25,6 +25,7 @@ body {
     padding: 20px;
     background-color: #2d2d2d;
     border-radius: 8px;
+    background-image: url("assets/7333589.jpg");
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
@@ -41,9 +42,48 @@ body {
 .right-panel {
     flex: 2;
     padding: 20px;
-    
     color: #fff;
+    position: relative; /* Make sure the container is positioned relative */
+    overflow: hidden; /* Hide the overflow of the right panel */
 }
+
+/* .right-panel::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%; /* Half the div size 
+    height: 100%;
+    background-image: url('assets/Helping-Hands-PNG-Images.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.1;
+} */
+
+.scrollable-content {
+    max-height: 500px; /* Set a maximum height for the content */
+    overflow-y: auto; /* Add vertical scroll */
+    padding-right: 20px; /* Add some padding to avoid scroll bar overlapping content */
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+.section h2,
+.section h3,
+.section h4 {
+    color: aliceblue;
+}
+
+.section ul,
+.section p {
+    color: aliceblue;
+}
+.app-guide-form-btn{
+    padding: 40px;
+}
+
 
 .profile {
     text-align: center;

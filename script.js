@@ -98,10 +98,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    recognitionTask.addEventListener("end", () => {
-        // Optionally restart recognition here
-    });
-
     if (voiceButtonTask) {
         voiceButtonTask.addEventListener("click", () => {
             recognitionTask.start();
@@ -182,13 +178,47 @@ document.addEventListener("DOMContentLoaded", () => {
             dropdown.classList.toggle("active");
         });
     });
+       // JavaScript for Text-to-Speech
+    // document.getElementById("play-quote").addEventListener("click", () => {
+    //     const quoteText = document.getElementById("quote-text").textContent;
+    //     const speech = new SpeechSynthesisUtterance(quoteText);
+    //     speechSynthesis.speak(speech);
+    // });
+    //  // JavaScript for Info Button
+    //  document.getElementById("info-button").addEventListener("click", () => {
+    //     alert(
+    //         "Access Buddy is a platform designed to enhance accessibility and provide support for individuals with disabilities. Our goal is to create tools and resources that make everyday tasks easier and more inclusive."
+    //     );
+    // });
 
+    // // JavaScript for Get Started Button
+    // document.getElementById("get-started").addEventListener("click", () => {
+    //     const nameInput = document.getElementById("name-input").value.trim();
+    //     if (nameInput) {
+    //         window.location.href = "index.html";
+    //     } else {
+    //         alert("Please enter your name to get started.");
+    //     }
+    // });
     // JavaScript for Text-to-Speech
-    document.getElementById("play-quote").addEventListener("click", () => {
-        const quoteText = document.getElementById("quote-text").textContent;
-        const speech = new SpeechSynthesisUtterance(quoteText);
-        speechSynthesis.speak(speech);
+    document.getElementById("read-text-btn").addEventListener("click", () => {
+        const textToRead = document.getElementById("text-to-read").value;
+        if (textToRead.trim() === "") {
+            alert("Please type some text to read.");
+            return;
+        }
+
+        // Use ResponsiveVoice to speak the text
+        responsiveVoice.speak(textToRead, "UK English Female", { rate: 1, pitch: 1 }, {
+            onstart: function() {
+                console.log("Speech started");
+            },
+            onend: function() {
+                console.log("Speech ended");
+            }
+        });
     });
+    
 
     // JavaScript for Info Button
     document.getElementById("info-button").addEventListener("click", () => {
@@ -196,32 +226,4 @@ document.addEventListener("DOMContentLoaded", () => {
             "Access Buddy is a platform designed to enhance accessibility and provide support for individuals with disabilities. Our goal is to create tools and resources that make everyday tasks easier and more inclusive."
         );
     });
-
-    // JavaScript for Get Started Button
-    document.getElementById("get-started").addEventListener("click", () => {
-        const nameInput = document.getElementById("name-input").value.trim();
-        if (nameInput) {
-            window.location.href = "index.html";
-        } else {
-            alert("Please enter your name to get started.");
-        }
-    });
-    // JavaScript for Text-to-Speech
-    document.getElementById("read-text-btn").addEventListener("click", () => {
-    const textToRead = document.getElementById("text-to-read").value;
-    if (textToRead.trim() === "") {
-        alert("Please type some text to read.");
-        return;
-    }
-    else{
-        alert("hi");
-    }
-    
-    const speech = new SpeechSynthesisUtterance(textToRead);
-    speechSynthesis.speak(speech);
-});
-
-
-
-    
 });
