@@ -111,12 +111,30 @@ input {
     flex: 1;
 }
 
-.add-btn {
+.add-btn{
     padding: 10px;
     background-color: rgb(49, 135, 211);
     color: #fff;
     border: none;
     border-radius: 4px;
+    cursor: pointer;
+}
+.upload-btn{
+    padding: 10px;
+    background-color: rgb(49, 135, 211);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+#read-all-tasks-btn{
+    padding: 10px;
+    background-color: rgb(49, 135, 211);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    margin-top: 5px;
     cursor: pointer;
 }
 
@@ -273,4 +291,27 @@ li button:hover {
 
 .back-arrow:hover {
     color: #ddd;
+}
+
+.text-to-read-label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+textarea#text-to-read {
+    width: 100%;
+    border: 2px solid #e3e3e9; 
+    border-radius: 4px; 
+    padding: 10px;
+    font-size: 16px;
+    color: #eceaea;
+    background-color: #2d2d2d;
+    resize: vertical; /* Allow vertical resizing only */
+    box-sizing: border-box; /* Ensure padding and border are included in the width */
+    outline: none; /* Remove default focus outline */
+}
+
+textarea#text-to-read:focus {
+    border-color: #2980b9; /* Darker border color on focus */
+    background-color: #2d2d2d;
 }
