@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <audio id="task-added-sound" src="sounds/task-added.mp3"></audio>
     <audio id="task-removed-sound" src="sounds/task-removed.mp3"></audio>
+    <script src="https://code.responsivevoice.org/responsivevoice.js?key=YOUR_KEY_HERE"></script>
 </head>
 <body>
     <div class="container">
@@ -99,14 +100,14 @@
                 <span style="color: rgb(49, 135, 211)">BUDDY</span>
             </h1>
 
-            <div class="scrollable-content">
+            <div class="scrollable-content" id="app-guide-content">
                 <!-- App Guide Content -->
                 <section class="section">
                     <h2>Introduction</h2>
                     <p>Welcome to Access Buddy, a platform designed to enhance accessibility and provide support for individuals with disabilities. Our goal is to create tools and resources that make everyday tasks easier and more inclusive. This guide will walk you through the main features of the application and how to use them.</p>
                 </section>
 
-                <section class="section" id="section-id">
+                <section class="section">
                     <h2>Navigating the Interface</h2>
                     <h3>1. Home Screen</h3>
                     <ul>
@@ -167,11 +168,9 @@
                         <li><strong>Exit:</strong> Speak “Exit” or “Bye” to stop voice commands.</li>
                     </ul>
                 </section>
-                
             </div>
-            <div class="app-guide-form-btn">
-                <button type="button" id="read-text-btn" aria-label="Read the text">READ TEXT</button>
-            </div>
+
+            <button id="read-text-btn">Read App Guide</button>
         </div>
     </div>
     <script src="script.js"></script>
