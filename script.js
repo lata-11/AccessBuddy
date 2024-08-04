@@ -7,6 +7,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const readAllTasksBtn = document.getElementById("read-all-tasks-btn");
     const taskAddedSound = document.getElementById("task-added-sound");
     const taskRemovedSound = document.getElementById("task-removed-sound");
+    const setReminderSound = document.getElementById("set-reminder-sound");
+    const removeReminderSound = document.getElementById("remove-reminder-sound");
 
     const tasks = new Map();
 
@@ -132,6 +134,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         li.querySelector("button").addEventListener("click", () => {
             li.remove();
+            playSound(removeReminderSound);
         });
 
         reminderList.appendChild(li);
@@ -139,6 +142,7 @@ document.addEventListener("DOMContentLoaded", () => {
         reminderDate.value = "";
         reminderTime.value = "";
         phoneNumber.value = "";
+        playSound(setReminderSound);
     };
 
     if (reminderForm) {

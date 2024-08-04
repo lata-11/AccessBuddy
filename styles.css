@@ -174,9 +174,32 @@ input {
     color: #fff;
     border: none;
     border-radius: 4px;
-    margin-top: 5px;
+    
     cursor: pointer;
 }
+#task-input{
+    background-color: #2d2d2d;
+}
+
+#reminder-message, #reminder-date, #reminder-time, #phone-number, #relationship-input, #name-input, #phone-input{
+    background-color: #2d2d2d;
+    color: #fff;
+}
+
+#read-text-btn{
+    padding: 10px;
+    background-color: rgb(49, 135, 211);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    margin-top: 5px;
+    cursor: pointer;
+    margin-left: 300px;
+    margin-top: 80px;
+
+
+}
+
 
 /* button:hover {
     background-color: #0056b3;
@@ -186,6 +209,7 @@ input {
     background-color: #28a745;
     color: #fff;
     font-size: 18px;
+    padding: 8px;
 }
 
 #voice-button:hover {
@@ -354,4 +378,25 @@ textarea#text-to-read {
 textarea#text-to-read:focus {
     border-color: #2980b9; /* Darker border color on focus */
     background-color: #2d2d2d;
+}
+.help-button{
+    background-color: #28a745;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.help-button:hover{
+    background-color: #0cee41;
+   
+}
+
+
+.remove-button{
+    background-color: #a73b28;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
 }

@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <audio id="task-added-sound" src="sounds/task-added.mp3"></audio>
     <audio id="task-removed-sound" src="sounds/task-removed.mp3"></audio>
-    <audio id="set-reminder-sound" src="sounds/set-reminder.mp3"></audio>
-    <audio id="remove-reminder-sound" src="sounds/remove-reminnder.mp3"></audio>
+    <audio id="remove-contact-sound" src="sounds/contact-remove.mp3"></audio>
+    <audio id="add-contact-sound" src="sounds/contact-added.mp3"></audio>
 </head>
 <body>
     <div class="container">
@@ -58,7 +58,7 @@
                             <li id="read-document-task-option">
                                 <a href="read_doc.html">READ A DOCUMENT <i class="fa-solid fa-plus"></i></a>
                             </li>
-                           
+                            
                         </ul>
                     </div>
                 </div>
@@ -102,37 +102,33 @@
                 <span style="color: aliceblue">ACCESS</span>
                 <span style="color: rgb(49, 135, 211)">BUDDY</span>
             </h1>
-            <form id="reminder-form">
+            <form id="contact-form">
                 <div class="right-side-form">
                     <div class="form-input">
-                        <label for="reminder-message"><span style="color: rgb(246, 248, 250)">Reminder Message</span></label>
-                        <input type="text" id="reminder-message" aria-required="true" placeholder="Enter reminder message here">
+                        <label for="name-input"><span style="color: aliceblue">ENTER NAME</span></label>
+                        <input type="text" id="name-input" aria-required="true" placeholder="Enter Name">
                     </div>
                     <div class="form-input">
-                        <label for="reminder-date"><span style="color: aliceblue">Date</span></label>
-                        <input type="date" id="reminder-date" aria-required="true">
+                        <label for="relationship-input"><span style="color: aliceblue">RELATIONSHIP</span></label>
+                        <input type="text" id="relationship-input" aria-required="true" placeholder="Enter Relationship">
                     </div>
                     <div class="form-input">
-                        <label for="reminder-time">Time</span></label>
-                        <input type="time" id="reminder-time" aria-required="true">
+                        <label for="phone-input"><span style="color: aliceblue">PHONE NUMBER</span></label>
+                        <input type="text" id="phone-input" aria-required="true" placeholder="Enter Phone Number">
                     </div>
-                    <div class="form-input">
-                        <label for="phone-number"><span style="color: aliceblue">Phone Number</span></label>
-                        <input type="tel" id="phone-number" aria-required="true" placeholder="Enter phone number">
-                    </div>
+                    
                     <div class="form-btn">
-                        <button type="button" id="voice-button" aria-label="set reminder using voice"><i class="fa-solid fa-microphone"></i></button>
-                     
-                        <button type="submit" class="add-btn"><span style="color: aliceblue">SET REMINDER</span></button>
-                       
+                        <button type="submit" class="add-btn"><span style="color: aliceblue">SUBMIT</span></button>
+                        <button type="button" id="voice-button" aria-label="Add task using voice"><i class="fa-solid fa-microphone"></i></button>
                     </div>
                 </div>
             </form>
-            <ul id="reminder-list" role="list">
-                <!-- reminder will be dynamically added here  -->
-           </ul>
+            <ul id="contact-list" role="list">
+                 <!-- Contacts will be dynamically added here  -->
+            </ul>
         </div>
     </div>
+    <script src="script2.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

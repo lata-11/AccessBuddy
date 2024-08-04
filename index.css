@@ -1,0 +1,86 @@
+.right-panel {
+    padding: 20px;
+    text-align: center;
+    /* The background color, border radius, and box shadow have been commented out */
+}
+
+.right-panel h1 {
+    margin-bottom: 10px;
+    font-size: 2.5rem;
+}
+
+.welcome-message {
+    margin-top: 50px;
+    font-size: 1.5rem;
+    color: rgb(249, 252, 255);
+    margin-bottom: 10px;
+}
+.img{
+    margin-top: 180px;
+    opacity: 0.6;
+}
+
+.app-description {
+    font-size: 1rem;
+    color: #eee9e9;
+    margin: 20px 0;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: row; /* Change this to row for side-by-side buttons */
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.action-button {
+    display: inline-block;
+    padding: 10px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: rgb(49, 135, 211);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.action-button:hover {
+    background-color: rgb(37, 102, 174);
+}
+
+.action-button:active {
+    background-color: rgb(25, 72, 124);
+}
+           
+.app-description{
+    font-size: 20px;
+}
+
+#read-message-btn {
+    background-color: rgb(109, 110, 110);
+    color: #fff;
+}
+
+#read-message-btn:hover {
+    background-color: rgb(20, 148, 149);
+}
+
+#read-message-btn:active {
+    background-color: rgb(15, 111, 113);
+}
+
+#read-message-btn i {
+    font-size: 1.5rem;
+}
+
+/* Additional styles to center content if needed */
+.content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+}

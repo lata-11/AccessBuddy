@@ -1,21 +1,30 @@
 document.addEventListener("DOMContentLoaded", () => {
-    document.getElementById("read-text-btn").addEventListener("click", () => {
-        const appGuideContent = document.getElementById("app-guide-content").innerText;
-        if (appGuideContent.trim() === "") {
-            alert("No content to read.");
-            return;
-        }
+    const readMessageBtn = document.getElementById("read-text-btn");
 
-        // Use ResponsiveVoice to speak the text
-        responsiveVoice.speak(appGuideContent, "UK English Female", {
-            rate: 1,
-            pitch: 1,
-            onstart: function() {
-                console.log("Speech started");
-            },
-            onend: function() {
-                console.log("Speech ended");
-            }
-        });
+    if (!readMessageBtn) {
+        console.error("Button with id 'read-text-btn' not found.");
+        return;
+    }
+
+    let utterance;
+
+    const readMessage = () => {
+        const message = `
+            Welcome to Access Buddy, a platform designed to enhance accessibility and provide support for individuals with disabilities.
+            Our goal is to create tools and resources that make everyday tasks easier and more inclusive. This guide will walk you through the main features of the application and how to use them.
+        `;
+        if (utterance) {
+            speechSynthesis.cancel(); // Stop any ongoing speech
+        }
+        utterance = new SpeechSynthesisUtterance(message);
+        speechSynthesis.speak(utterance);
+    };
+
+    readMessageBtn.addEventListener("click", readMessage);
+
+    document.addEventListener("click", (event) => {
+        if (event.target !== readMessageBtn) {
+            speechSynthesis.cancel(); // Stop speech if clicking outside the button
+        }
     });
 });

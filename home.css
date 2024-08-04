@@ -70,7 +70,7 @@ h3 {
 }
 
 .get-started button {
-    background-color:rgb(160, 49, 211);
+    background-color:rgb(49, 135, 211);
     color: white;
     border: none;
     border-radius: 4px;
@@ -83,7 +83,7 @@ h3 {
 }
 
 .get-started button:hover {
-    background-color: rgb(160, 49, 211);
+    background-color: rgb(49, 135, 211);
 }
 #info-button, #play-quote{
     padding: 8px;

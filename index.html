@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Access Buddy</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <audio id="task-added-sound" src="sounds/task-added.mp3"></audio>
     <audio id="task-removed-sound" src="sounds/task-removed.mp3"></audio>
@@ -35,14 +36,11 @@
                             <li id="add-remove-task-option">
                                 <a href="add.html">ADD/REMOVE TASK <i class="fa-solid fa-plus"></i></a>
                             </li>
-                          
-                                <li id="add-remove-task-option">
-                                    <a href="reminder.html">SET REMINDER <i class="fa-solid fa-plus"></i></a>
-                                </li>
-                            
+                            <li id="add-remove-task-option">
+                                <a href="reminder.html">SET REMINDER <i class="fa-solid fa-plus"></i></a>
+                            </li>
                         </ul>
                     </div>
-                    
                 </div>
                
                 <div class="dropdown">
@@ -58,7 +56,6 @@
                             <li id="read-document-task-option">
                                 <a href="read_doc.html">READ A DOCUMENT <i class="fa-solid fa-plus"></i></a>
                             </li>
-                            <!-- <li>READ A DOCUMENT</li> -->
                         </ul>
                     </div>
                 </div>
@@ -72,8 +69,9 @@
                     </div>
                     <div class="dropdown-content">
                         <ul>
-                            <li>Task 1</li>
-                            <li>Task 2</li>
+                            <li id="add-remove-task-option">
+                                <a href="emergency.html">ADD / REMOVE CONTACT <i class="fa-solid fa-plus"></i></a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -99,27 +97,28 @@
         </div>
         
         <div class="right-panel" id="task-interface">
-            <h1>
-                <span style="color: aliceblue">ACCESS</span>
-                <span style="color: rgb(49, 135, 211)">BUDDY</span>
-            </h1>
-            <!-- <form id="task-form">
-                <div class="right-side-form">
-                    <div class="form-input">
-                        <label for="task-input"><span style="color: aliceblue">NEW TASK</span></label>
-                        <input type="text" id="task-input" aria-required="true" placeholder="Enter task here">
-                    </div>
-                    <div class="form-btn">
-                        <button type="submit" class="add-btn"><span style="color: aliceblue">ADD TASK</span></button>
-                        <button type="button" id="voice-button" aria-label="Add task using voice"><i class="fa-solid fa-microphone"></i></button>
-                    </div>
+            <div class="content-container">
+                <h1>
+                    <span style="color: aliceblue">ACCESS</span>
+                    <span style="color: rgb(49, 135, 211)">BUDDY</span>
+                </h1>
+                <h3 class="welcome-message">WELCOME, LATA!</h3>
+                <h4 class="app-description">
+                    Access Buddy is your all-in-one personal assistant designed to help you manage tasks, set reminders, and keep track of emergency contacts effortlessly. With voice recognition and an intuitive interface, you can easily stay organized and focused on what matters most.
+                </h4>
+                <div class="button-container">
+                    <button id="read-message-btn" class="action-button" aria-label="Read message">
+                        <i class="fa-solid fa-volume-high"></i>
+                    </button>
+                    <a href="app_guide.html" class="action-button">App Guide</a>
                 </div>
-            </form>
-            <ul id="task-list" role="list">
-                 Tasks will be dynamically added here 
-            </ul> -->
+            </div>
+            <div  class="img">
+                <img  src="assets/pngtree-people-greeting-gesture-character-welcome-png-image_6082681.png">
+            </div>
         </div>
     </div>
+    <script src="index.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
